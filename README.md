@@ -1,95 +1,110 @@
 # sanfranschizo.com
 You are the mayor of San Franschizo. Best of luck sucka
-
-Here's a plan to develop "Mayor of San Franschizo" using the guide from Peter Lunch's blog on how to plan and build a programming project:
+Here's a detailed plan for "Mayor of San Franschizo" based on the Peter Lunch's blog on planning and building a programming project:
 
 Step 1: Define the Project
 Project Definition:
 
-    What is the Project? "Mayor of San Franschizo" is a satirical city management game where players govern a whimsical version of San Francisco, leveraging LLM technology for dynamic gameplay.
-    MVP (Minimal Viable Product):
-        Basic city management with a few core issues (Tech Bro Invasion, Homelessness Crisis).
-        Simple LLM integration for policy outcomes and basic character interactions.
-        A single district with limited buildings and upgrades.
+    Concept: An LLM-powered city management game where you play as the mayor of a satirical San Francisco, navigating through AI-generated events with decisions affecting your popularity.
+    MVP Features:
+        Basic city management interface.
+        LLM-generated events with multiple choice responses.
+        A "Popularity" system that reacts to player decisions.
+        Simple event difficulty scaling.
+        Basic recall mechanism if popularity drops.
+        Local leaderboard for tracking player progress.
     Nice to Haves:
-        Multiple districts with unique challenges.
-        Extensive LLM-generated events, stories, and social media interactions.
-        Multiplayer or community events where players can impact each other's cities.
-    When will the Project be Complete? Target completion for MVP in 3 months, with ongoing updates for additional features.
+        Advanced LLM interactions for more nuanced event outcomes.
+        Multiple city districts with unique challenges.
+        Complex recall campaign with phases and LLM-driven public opinion.
+        Online integration for a global leaderboard.
+    Completion Criteria: MVP complete when basic gameplay is functional, including LLM integration, popularity tracking, and recall. Full release when all "Nice to Haves" are implemented.
 
 
 Step 2: Set Up Your Workflow
 Tools Needed:
 
-    Development Environment: Use Visual Studio Code for its versatility with JavaScript/Node.js or Python, depending on the game engine.
-    Version Control: GitHub for tracking changes and collaboration.
-    Project Management: Trello or Jira for managing tasks, with a Kanban board setup.
+    Development Environment: Visual Studio Code or similar for coding; Unity or Godot for game development.
+    Version Control: GitHub for managing code changes.
+    Project Management: Trello or Jira for task tracking.
 
 
 Workflow Setup:
 
-    Create a Trello board with columns: To Do, Doing, Done.
-    Cards for each feature or task, like "Implement LLM Policy Generation", "Design Character Interaction System".
+    Initiate a Trello board with columns like "To Do", "In Progress", "Testing", "Done".
+    Create cards for each feature (e.g., "LLM Event Generator", "Popularity Score System").
 
 
 Step 3: Break Down the Project
 Components to Build:
 
-    Game Engine: Decide between Unity, Godot, or a custom HTML5/JavaScript setup.
-    LLM Integration: 
-        API Connection: Use an API like xAI's for LLM capabilities.
-        Policy Generator: Write a module where LLM suggests outcomes based on player input.
-        Character Dialogue: Develop an interface where characters respond dynamically.
+    Game Engine & UI:
+        Design a simple, engaging UI for managing the city, viewing popularity, and making decisions.
+    LLM Integration:
+        Event Generator: Use LLM to create unique events. API integration with an LLM service.
+        Decision Options: LLM provides at least three options for each event, with outcomes reflecting current city state.
+    Popularity Mechanics:
+        Score System: Popularity score updates based on event outcomes, with LLM determining the impact.
+        Visual Representation: A meter or percentage display for the player's popularity.
+    Event Difficulty Scaling:
+        Algorithm: Over time, increase event complexity or reduce the attractiveness of response options.
+    Recall Campaign:
+        Trigger: Popularity below 30% for three in-game days initiates a recall campaign.
+        Process: LLM narrates the campaign's progress, public sentiment, and final vote.
+    Leaderboard:
+        Backend: Store player stats (time, popularity, events managed).
+        Frontend: Display leaderboard within the game or via a web interface.
 
 
 Tasks:
 
-    Backend:
-        Set up server to handle LLM requests.
-        Create a database schema for game state, player choices, and dynamic content.
-    Frontend:
-        Design UI for city management, policy creation, and social media simulation.
-        Implement visual feedback for LLM-generated events (like memes or news articles).
-
-
-Checklist for Each Task:
-
-    Policy Generator:
-        Connect to LLM service.
-        Define input structure for policy ideas.
-        Implement response parsing and display.
+    Backend Development:
+        Set up server for LLM requests, database for game state and leaderboard.
+        Implement scoring and recall logic.
+    Frontend Development:
+        Design and code the game interface.
+        Integrate LLM responses into the UI for event handling.
+    LLM Integration:
+        Write functions to query LLM for event generation and outcome prediction.
 
 
 Step 4: Build and Iterate
 Action Plan:
 
-    Week 1-4: 
-        Research and setup LLM integration, choose game engine, basic UI/UX design.
-    Week 5-8: 
-        Implement core gameplay mechanics (city management, basic policy effects).
-        Start with one district's challenges.
-    Week 9-12: 
-        Integrate LLM for dynamic events and character interactions.
-        Test the MVP, gather feedback.
+    Week 1-4:
+        Set up game engine, basic UI, and LLM integration for event generation.
+        Implement initial popularity tracking.
+    Week 5-8:
+        Develop the event response system, including option generation by LLM.
+        Begin event difficulty scaling and basic recall mechanics.
+    Week 9-12:
+        Refine the popularity system, making it more responsive to player decisions.
+        Implement and test the recall campaign.
+        Set up local leaderboard.
 
 
 Iteration:
 
-    Regular playtesting sessions, possibly with a small community to get insights on LLM effectiveness and game balance.
-    Use feedback to refine mechanics and expand LLM usage for more depth.
+    Playtesting: Regular sessions to adjust event balance, popularity impact, and recall frequency.
+    Feedback: Collect and integrate player feedback to tweak game mechanics.
 
 
 Step 5: Release and Update
 Release Strategy:
 
-    MVP Release: Launch on itch.io or a similar platform for indie games, gather feedback.
-    Marketing: Use social media, perhaps with a teaser campaign showing LLM-generated content.
+    MVP Release: Launch with basic features on platforms like itch.io or Steam.
+    Marketing: Focus on the novelty of LLM-driven gameplay, share gameplay clips, and promote the leaderboard.
 
 
 Post-Release:
 
-    Updates: Based on player feedback, add new districts, LLM-driven events, and community features.
-    Community Engagement: Host events where players suggest new content, which can be integrated through LLM.
+    Updates: 
+        Enhance LLM interaction for richer events and outcomes.
+        Add more districts and types of events.
+        Implement online leaderboard for broader competition.
+    Community Engagement: 
+        Use social media to share top leaderboard scores or notable in-game events.
+        Encourage community feedback for new LLM-generated content or gameplay mechanics.
 
 
-By following this structured approach, you'll ensure that "Mayor of San Franschizo" not only gets built but does so in a way that leverages the unique capabilities of LLMs, aiming for virality and addictiveness through innovative gameplay and social interaction. Remember, the key to success is in the iteration and responsiveness to player feedback.
+By following this plan, "Mayor of San Franschizo" will not only leverage the latest in LLM technology for a unique gaming experience but also incorporate addictive game mechanics like popularity-based progression and competitive elements through the leaderboard, aiming for both virality and player retention.
