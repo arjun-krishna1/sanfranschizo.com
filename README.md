@@ -1,5 +1,7 @@
 # sanfranschizo.com
 You are the mayor of San Franschizo. Best of luck sucka
+
+
 Here's a detailed plan for "Mayor of San Franschizo" based on the Peter Lunch's blog on planning and building a programming project:
 
 Step 1: Define the Project
